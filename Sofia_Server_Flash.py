@@ -49,7 +49,7 @@ def verificar_garantia(numero_op):
         print(f">>> Consultando base de garantia para a OP: {numero_op}")
         
         # <<< Aqui a gente avisa que o separador é o ponto e vírgula >>>
-        df = pd.read_csv("base_garantia.csv", sep=';', header=0) 
+        df = pd.read_csv("base_garantia..csv", sep=';', header=0) 
         
         # Dai limpa os nomes das colunas
         df.columns = df.columns.str.strip()
@@ -151,4 +151,5 @@ def receber_e_responder():
 if __name__ == "__main__":
 
     app.run(port=xxxx)
+
 
