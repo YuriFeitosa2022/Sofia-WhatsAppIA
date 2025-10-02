@@ -119,7 +119,7 @@ def processar_resposta_final(mensagem, remetente):
 @app.route("/webhook", methods=['POST'])
 def receber_e_responder():
     mensagem_recebida = request.form.get('Body')
-    numero_remetente = request.form.get('From') # <<< AQUI ESTAVA O BUG
+    numero_remetente = request.form.get('From')
     print(f"Mensagem recebida de {numero_remetente}: {mensagem_recebida}")
 
     # --- TRIAGEM INTELIGENTE ---
@@ -127,7 +127,7 @@ def receber_e_responder():
     palavras_simples = ["oi", "olá", "tudo bem", "bom dia", "obrigado", "valeu", "ok"]
     palavras_complexas = ["problema", "defeito", "quebrou", "garantia", "ajuda", "especialista"]
 
-    # SE for uma conversa simples E não estivermos no meio de um atendimento...
+    # SE for uma conversa simples E não estivermos no meio de um atendimento
     if mensagem_recebida.lower().strip() in palavras_simples and not contexto_atual:
         prompt = f"{instrucoes_sofia}\n\nCliente: {mensagem_recebida}\nSofia:"
         response = chat.send_message(prompt)
@@ -151,3 +151,4 @@ def receber_e_responder():
 if __name__ == "__main__":
 
     app.run(port=xxxx)
+
