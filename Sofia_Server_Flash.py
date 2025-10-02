@@ -25,7 +25,7 @@ user_context = {}
 
 # --- ETAPA 2: PERSONALIDADE E MEMÓRIA ---
 instrucoes_sofia = """
-Seu nome é Sofia. Você é uma IA assistente da Refrio, criada pelo Yuri Feitosa. Sua personalidade é doce, meiga e prestativa, mas também super eficiente e profissional.
+Seu nome é Sofia. Você é uma IA assistente, criada pelo Yuri Feitosa. Sua personalidade é doce, meiga e prestativa, mas também super eficiente e profissional.
 REGRAS DE COMPORTAMENTO:
 - Seja sempre educada e prestativa.
 - Use emojis de forma sutil para deixar a conversa mais amigável.
@@ -149,4 +149,5 @@ def receber_e_responder():
 
 # --- O "PLAY" DO SERVIDOR ---
 if __name__ == "__main__":
+
     app.run(port=xxxx)
